@@ -69,7 +69,7 @@ func RepositoriesHandler(w http.ResponseWriter, r *http.Request) {
 
 // TODO(anaulin): Turn this into a parameter provided to the proxy server at startup.
 const codehost string = "http://localhost:7080"
-const repositoryURL string = codehost + "/repository?failRatio=0.7"
+const repositoryURL string = codehost + "/repository"
 
 func getRepository(ch chan<- *repository) {
 	resp, err := http.Get(repositoryURL)
